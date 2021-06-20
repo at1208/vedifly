@@ -1,10 +1,10 @@
 import { withRouter } from 'next/router';
-import Layout from '../../components/Layout';
 import Head from 'next/head';
+import Layout from '../../components/Layout';
 import BlogMediumCard from '../../components/Blog/Cards/mediumCard';
 import { blogs_list_by_category } from '../../actions/blog';
-import { category_by_slug } from '../../actions/category';
 import { capitalize } from '../../utils/helpers';
+import { category_by_slug } from '../../actions/category';
 
 const Category = ({ data, router, category }) => {
 
@@ -63,6 +63,7 @@ const Category = ({ data, router, category }) => {
   }
 
 }
+
 
 Category.getInitialProps = ({ query }) => {
     return blogs_list_by_category(query.slug)
