@@ -1,5 +1,5 @@
-import { withRouter } from 'next/router';
 import Head from 'next/head';
+import { withRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import BlogMediumCard from '../../components/Blog/Cards/mediumCard';
 import { blogs_list_by_category } from '../../actions/blog';
@@ -7,6 +7,8 @@ import { capitalize } from '../../utils/helpers';
 import { category_by_slug } from '../../actions/category';
 
 const Category = ({ data, router, category }) => {
+
+
 
   if(data && category && category.length){
    function BlogsByCategory(){
@@ -61,7 +63,6 @@ const Category = ({ data, router, category }) => {
     return <>
            </>
   }
-
 }
 
 
@@ -71,6 +72,6 @@ Category.getInitialProps = ({ query }) => {
           let category = await category_by_slug(query.slug);
           return { data: response, category }
       })
-
+}
 
 export default withRouter(Category);
