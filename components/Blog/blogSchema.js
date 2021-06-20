@@ -3,26 +3,26 @@ const BlogSchema = (blog) => {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `${process.env.NEXT_PUBLIC_DOMAIN}/blogs/${"query.slug"}`
+    "@id": `${process.env.NEXT_PUBLIC_DOMAIN}/${blog.slug}`
   },
-  "headline": "blog.title",
-  "image": `${process.env.NEXT_PUBLIC_API}/blog/photo/${"blog.slug"}`,
+  "headline": blog.title,
+  "image": `${process.env.NEXT_PUBLIC_API}/${blog.featureImg}`,
   "author": {
     "@type": "Person",
-    "name": "blog.postedBy.name"
+    "name": blog.postedBy.full_name
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Geeksocean.com",
+    "name": "Vedifly.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://geeksocean.com/static/images/Logo.jpg",
+      "url": "https://vedifly.com/vedifly.png",
       "width": 60,
       "height": 60
     }
   },
-  "datePublished": "blog.createdAt",
-  "dateModified": "blog.updatedAt"
+  "datePublished": blog.createdAt,
+  "dateModified": blog.updatedAt
   }
 }
 

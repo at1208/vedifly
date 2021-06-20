@@ -1,7 +1,7 @@
 module.exports = {
-  siteUrl: 'https://example.com',
+  siteUrl: 'https://www.vedifly.com',
   changefreq: 'daily',
-  priority: 0.7,
+  priority: 1,
   sitemapSize: 5000,
   generateRobotsTxt: true,
   exclude: ['/server-sitemap.xml'],
@@ -19,18 +19,10 @@ module.exports = {
       {
         userAgent: '*',
         allow: '/',
-      },
-      {
-        userAgent: 'test-bot',
-        allow: ['/path', '/path-2'],
-      },
-      {
-        userAgent: 'black-listed-bot',
-        disallow: ['/sub-path-1', '/path-2'],
-      },
+      }
     ],
     additionalSitemaps: [
-      'https://example.com/server-sitemap.xml'
+      'https://www.vedifly.com/server-sitemap.xml'
     ],
   },
 }

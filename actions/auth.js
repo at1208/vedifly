@@ -22,8 +22,8 @@ export const one_tap_login = (data) => {
 
 
 export const signout = next => {
-    removeCookie('token');
-    removeLocalStorage('user');
+    removeCookie(`token-${process.env.NEXT_PUBLIC_DOMAIN_URL}`);
+    removeLocalStorage(`user-${process.env.NEXT_PUBLIC_DOMAIN_URL}`);
     next();
 };
 
@@ -68,18 +68,18 @@ export const removeLocalStorage = key => {
 
 
 export const authenticate = (data, next) => {
-    setCookie('token', data.token);
-    setLocalStorage('user', data.user);
+    setCookie(`token-${process.env.NEXT_PUBLIC_DOMAIN_URL}`, data.token);
+    setLocalStorage(`user-${process.env.NEXT_PUBLIC_DOMAIN_URL}`, data.user);
     next();
 };
 
 
 export const isAuth = () => {
     if (process.browser) {
-        const cookieChecked = getCookie('token');
+       const cookieChecked = getCookie(`token-${process.env.NEXT_PUBLIC_DOMAIN_URL}`);
         if (cookieChecked) {
-            if (localStorage.getItem('user')) {
-                return JSON.parse(localStorage.getItem('user'));
+          if (localStorage.getItem(`user-${process.env.NEXT_PUBLIC_DOMAIN_URL}`)) {
+             return JSON.parse(localStorage.getItem(`user-${process.env.NEXT_PUBLIC_DOMAIN_URL}`));
             } else {
                 return false;
             }

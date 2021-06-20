@@ -2,9 +2,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host:https://vedifly.com
+Host: https://vedifly.com
 
-Disallow: https://cms.readifly.com/api/*
 
 # Sitemaps
-Sitemap:https://vedifly.com/server-sitemap.xml
+Sitemap: https://vedifly.com/server-sitemap.xml

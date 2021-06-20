@@ -95,11 +95,11 @@
 }
 .tagcatbtn{
   font-size: 13px;
-  border: 0px solid white;
+  border: 1px solid rgb(224 224 224);
   text-transform: capitalize!important;
   min-width: 50px;
-  background-color: lightgrey;
-  padding: 5px 10px 5px 10px;
+  background-color: #e4e0e0;
+  padding: 7px 12px 7px 12px;
   margin: 5px;
 }
 .extras{
@@ -137,5 +137,5 @@
   line-height: 20px;
 }
 .logo{
- 
+
 }
