@@ -17,8 +17,8 @@ const Card = ({ blog }) => {
                        <div className={styles.category}>
 
                        </div>
-                       <div className="col pt-2 authorCat">
-                        <font className={styles.name}>{blog.postedBy.full_name}</font>
+                       <div className="col authorCat">
+                        <font className={styles.name}>{blog.postedBy.full_name.split(" ")[0]}</font>
                         <font className={styles.in}>in</font>
                         <font className={styles.categoryname}>{blog.categories[0].name}</font>
                        </div>
