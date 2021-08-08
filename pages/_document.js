@@ -7,11 +7,11 @@ class MyDocument extends Document {
     if (process.env.NEXT_PUBLIC_PRODUCTION_API) {
       return {
         __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-PWKTXR5VVB');
-   `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-204324898-1');
+   `,
       };
     }
   }
@@ -54,7 +54,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/vedifly.svg" />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-PWKTXR5VVB"
+            src="https://www.googletagmanager.com/gtag/js?id=UA-204324898-1"
           ></script>
 
           <script
@@ -73,13 +73,13 @@ class MyDocument extends Document {
   }
 }
 
-MyDocument.getInitialProps = async ctx => {
+MyDocument.getInitialProps = async (ctx) => {
   const sheets = new ServerStyleSheets();
   const originalRenderPage = ctx.renderPage;
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: App => props => sheets.collect(<App {...props} />)
+      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
     });
 
   const initialProps = await Document.getInitialProps(ctx);
@@ -88,8 +88,8 @@ MyDocument.getInitialProps = async ctx => {
     ...initialProps,
     styles: [
       ...React.Children.toArray(initialProps.styles),
-      sheets.getStyleElement()
-    ]
+      sheets.getStyleElement(),
+    ],
   };
 };
 
