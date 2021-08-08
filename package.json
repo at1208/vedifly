@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "npm-run-all --sequential build:*",
     "build:client": "next build",
-    "build:sitemap": "next-sitemap --config next-sitemap.js",
-    "start": "next start"
+    "start": "next start",
+    "noIndex": "npm run build && echo 'User-agent: *\nDisallow: /' > out/robots.txt"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",

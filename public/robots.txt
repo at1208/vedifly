@@ -6,4 +6,4 @@ Host: https://www.vedifly.com
 
 
 # Sitemaps
-Sitemap: https://www.vedifly.com/server-sitemap.xml
+Sitemap: https://www.vedifly.com/sitemap.xml
