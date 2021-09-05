@@ -1,10 +1,12 @@
-import React from 'react';
-import { Skeleton } from 'antd';
+import React from "react";
+import Skeleton from "react-loading-skeleton";
 
 const SmallCardSkeleton = () => {
-  return <div className="row p-2">
-          <Skeleton  active paragraph={{ rows: 3 }} />
-         </div>
-}
+  return (
+    <div className="p-2">
+      <Skeleton />
+    </div>
+  );
+};
 
 export default SmallCardSkeleton;

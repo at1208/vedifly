@@ -1,50 +1,63 @@
-.outercontainer{
+.outercontainer {
   /* height: 110px; */
-  margin-bottom: 10px;
-  padding-bottom: 20px;
+  /* margin-bottom: 10px; */
+  /* padding-bottom: 20px; */
   padding-left: 3%;
   padding-top: 20px;
   padding-right: 3%;
 }
-.picture{
+.picture {
   height: 35px;
   width: 35px;
   border-radius: 50%;
 }
-.appname{
-  font-size: 30px;
+.appname {
+  /* font-size: 25px;
+  font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 600;
   font-family: none;
-  padding-top: 20px;
+  padding-top: 30px; */
+  font-size: 45px;
+  line-height: 60px;
+  margin-top: 0.56em;
+  margin-bottom: -0.27em;
+  letter-spacing: -0.011em;
+  font-weight: 600;
+  color: rgba(41, 41, 41, 1);
+  font-style: normal;
+  font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
 }
-@media (min-width:767px) {
-  .appname{
+@media (min-width: 767px) {
+  .appname {
     font-size: 40px;
   }
-  .outercontainer{
+  .outercontainer {
     padding-bottom: 20px;
     padding-left: 9%;
     padding-top: 20px;
     padding-right: 9%;
   }
 }
-.menuitem{
+.menuitem {
   border: 0px solid black;
 }
 
-.name{
+.name {
   /* padding:5px  10px 0px;
   font-weight: 400;
   font-size: 15px; */
 }
 
-@media (min-width:767px) {
-  .logo{
-   width: 100px
+@media (min-width: 767px) {
+  .logo {
+    width: 130px;
   }
 }
-@media (max-width:767px) {
-  .logo{
-   width: 80px
+@media (max-width: 767px) {
+  .appname {
+    font-size: 30px;
+  }
+  .logo {
+    width: 80px;
   }
 }
